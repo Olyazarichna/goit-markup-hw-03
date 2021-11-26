@@ -33,6 +33,7 @@ img {
 /* общие стили для контейнеров */
 
 .container {
+  box-sizing: border-box;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -124,13 +125,13 @@ img {
 
 /* общий контейнер дл секции hero */
 .hero-title {
-  padding-top: 212px;
-  padding-bottom: 268px;
   width: 696px;
   text-align: center;
-  margin-left: 462px;
+  margin: auto;
 }
-
+.section .hero-title {
+  padding-top: 118px;
+}
 /* Button portfolio */
 
 .btn {
@@ -151,16 +152,20 @@ img {
 
 /* кнопка в hero */
 .offer {
-  display: inline-block;
+  display: block;
+  margin: auto;
   margin-top: 18px;
   width: 200px;
-  padding: 0;
+  padding: 10px 8px;
   color: #ffffff;
   background-color: var(--accent-color);
   font-style: 700;
   font-size: 16px;
   line-height: 1.87;
   border: 0;
+}
+.hero-btn {
+  padding-bottom: 74px;
 }
 .offer:hover,
 .offer:focus {
@@ -292,9 +297,11 @@ img {
 .element {
   text-decoration: none;
 }
+/* блок работы */
 .filtr {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .list.filtr-items + .filtr-items {
   margin-left: 8px;
@@ -311,15 +318,32 @@ img {
   border-bottom: 1px solid #ececec;
 }
 .flex-container {
-  background-color: tomato;
   display: flex;
+  width: 1170px;
+  padding: 0;
+}
+
+.list.flex-item {
+  display: flex;
+  align-items: center;
 }
 .list-flex {
   display: flex;
   flex-wrap: wrap;
-  width: calk(100% - (60px * 2)/3);
+  width: calk((100%)/3);
 }
-.list.flex-item {
-  display: flex;
-  align-items: center;
+.list.flex-item:nth-child(3n + 2) {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.list.flex-item:nth-last-child(-n + 6) {
+  margin-top: 30px;
+}
+
+.flex-content {
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid #eeeeee;
 }
