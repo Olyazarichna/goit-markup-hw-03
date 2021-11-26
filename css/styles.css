@@ -314,3 +314,12 @@ img {
   background-color: tomato;
   display: flex;
 }
+.list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: calk(100% - (60px * 2)/3);
+}
+.list.flex-item {
+  display: flex;
+  align-items: center;
+}
