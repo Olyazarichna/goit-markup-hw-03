@@ -5,9 +5,7 @@
   --accent-color: #2196f3;
   --primary-text-color: #212121;
 }
-htlm {
-  box-sizing: border-box;
-}
+
 body {
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
@@ -33,19 +31,19 @@ img {
 /* общие стили для контейнеров */
 
 .container {
-  box-sizing: border-box;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Logo styles */
 .logo {
   display: block;
   font-family: 'Raleway';
   margin-right: 93px;
-  margin-top: 24px;
+
   font-weight: 700;
   font-size: 26px;
   line-height: 1.17;
@@ -66,10 +64,8 @@ img {
 /* общей клас для logo и силок */
 .nav {
   display: flex;
+  align-items: center;
 }
-/* .list.item {
-  display: flex;
-} */
 
 .list.item + .item {
   margin-left: 50px;
@@ -113,9 +109,15 @@ img {
 /* Section hero */
 .hero {
   background-color: var(--primary-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .title {
-  padding-left: 45px;
+  max-width: 650px;
+  text-align: center;
+  /* padding-left: 30px;
+  padding-right: 20px; */
+  margin: auto;
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
@@ -123,15 +125,6 @@ img {
   text-transform: uppercase;
 }
 
-/* общий контейнер дл секции hero */
-.hero-title {
-  width: 696px;
-  text-align: center;
-  margin: auto;
-}
-.section .hero-title {
-  padding-top: 118px;
-}
 /* Button portfolio */
 
 .btn {
@@ -154,19 +147,20 @@ img {
 .offer {
   display: block;
   margin: auto;
-  margin-top: 18px;
-  width: 200px;
-  padding: 10px 8px;
+  margin-top: 30px;
+  padding: 10px 33px;
+
   color: #ffffff;
   background-color: var(--accent-color);
   font-style: 700;
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.06em;
   border: 0;
 }
-.hero-btn {
+/* .hero-btn {
   padding-bottom: 74px;
-}
+} */
 .offer:hover,
 .offer:focus {
   background-color: #188ce8;
@@ -193,8 +187,15 @@ img {
   font-weight: 700;
   line-height: 1.13;
 }
+.section.contain {
+  padding-top: 0;
+}
 .hidden {
-  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: -1px;
 }
 
 .benefits-list {
@@ -257,8 +258,7 @@ img {
 }
 /* Footer */
 .footer-logo {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .wrap {
   background-color: var(--primary-color);
@@ -266,14 +266,15 @@ img {
   padding-bottom: 60px;
 }
 .part {
-  padding-top: 9px;
-  padding-bottom: 9px;
   color: #ffffff;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
   text-decoration: none;
   font-style: normal;
+}
+.footer-item {
+  margin-top: 9px;
 }
 .list > .part {
   color: rgba(255, 255, 255, 0.6);
@@ -283,6 +284,7 @@ img {
 }
 /* Portfolio */
 .headline {
+  margin-bottom: 4px;
   color: var(--primary-text-color);
   font-size: 18px;
   font-weight: 700;
@@ -314,7 +316,7 @@ img {
   border-radius: 4px;
 }
 
-.second-page {
+.features {
   border-bottom: 1px solid #ececec;
 }
 .flex-container {
@@ -323,10 +325,6 @@ img {
   padding: 0;
 }
 
-.list.flex-item {
-  display: flex;
-  align-items: center;
-}
 .list-flex {
   display: flex;
   flex-wrap: wrap;
@@ -341,9 +339,7 @@ img {
 }
 
 .flex-content {
-  box-sizing: border-box;
-  padding-left: 24px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 24px;
   border: 1px solid #eeeeee;
+  border-top: 0px;
 }
