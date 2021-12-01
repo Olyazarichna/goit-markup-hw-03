@@ -338,7 +338,7 @@ img {
 .list-flex {
   display: flex;
   flex-wrap: wrap;
-  width: calk((100%)/3);
+  /* width: calc((100%) / 3); */
 }
 .list.flex-item:nth-child(3n + 2) {
   margin-right: 30px;
